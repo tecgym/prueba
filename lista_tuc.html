@@ -1,0 +1,174 @@
+<html>
+
+<head>
+    <title>Table search: HTML - JavaScript</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+    <script language="javascript">
+        function doSearch() {
+            var tableReg = document.getElementById('regTable');
+            var searchText = document.getElementById('searchTerm').value.toLowerCase();
+            for (var i = 1; i < tableReg.rows.length; i++) {
+                var cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+                var found = false;
+                for (var j = 0; j < cellsOfRow.length && !found; j++) {
+                    var compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+                    if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1)) {
+                        found = true;
+                    }
+                }
+                if (found) {
+                    tableReg.rows[i].style.display = '';
+                } else {
+                    tableReg.rows[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+<br><br><br>
+    <div class="container px-4">
+        <div class="row gx-5">
+            <div class="col">
+                <div class="p-3 border bg-light">
+                    <center> <h2>TUC INCLINE CLIENT v1.0.0</h2>
+                        <br>
+                        <label>Buscar:
+                            <input id="searchTerm" type="text" onkeyup="doSearch()" />
+                        </label>
+                    </center>
+                    <br>
+                    <br>
+                    <table id="regTable" class="table table-striped">
+                        <tr align="center" class="table-success"><td align="left"><b>ITEM</b></td><td><b>REFERENCE</b></td><td><b>VALUE</b></td></tr>
+                        <tr align="center"><td align="left">1</td><td>R1</td><td><a href="https://s.click.aliexpress.com/e/_A5A6Uo" target="_blank"><p style="color:#000000">10</p></a></td></tr>
+                        <tr align="center"><td align="left">2</td><td>R12</td><td><a href="https://s.click.aliexpress.com/e/_A5A6Uo" target="_blank"><p style="color:#000000">10</p></a></td></tr>
+                        <tr align="center"><td align="left">3</td><td>R2</td><td><a href="https://s.click.aliexpress.com/e/_AkGKla" target="_blank"><p style="color:#000000">22</p></a></td></tr>
+                        <tr align="center"><td align="left">4</td><td>R38</td><td><a href="https://s.click.aliexpress.com/e/_AkGKla" target="_blank"><p style="color:#000000">22</p></a></td></tr>
+                        <tr align="center"><td align="left">5</td><td>R39</td><td><a href="https://s.click.aliexpress.com/e/_AkGKla" target="_blank"><p style="color:#000000">22</p></a></td></tr>
+                        <tr align="center"><td align="left">6</td><td>R40</td><td><a href="https://s.click.aliexpress.com/e/_AkGKla" target="_blank"><p style="color:#000000">22</p></a></td></tr>
+                        <tr align="center"><td align="left">7</td><td>R41</td><td><a href="https://s.click.aliexpress.com/e/_AkGKla" target="_blank"><p style="color:#000000">22</p></a></td></tr>
+                        <tr align="center"><td align="left">8</td><td>R3</td><td><a href="https://s.click.aliexpress.com/e/_AmEpYM" target="_blank"><p style="color:#000000">2k</p></a></td></tr>
+                        <tr align="center"><td align="left">9</td><td>R8</td><td><a href="https://s.click.aliexpress.com/e/_AmEpYM" target="_blank"><p style="color:#000000">2k</p></a></td></tr>
+                        <tr align="center"><td align="left">10</td><td>R4</td><td><a href="https://s.click.aliexpress.com/e/_Al6cVK" target="_blank"><p style="color:#000000">1k</p></a></td></tr>
+                        <tr align="center"><td align="left">11</td><td>R5</td><td><a href="https://s.click.aliexpress.com/e/_Al6cVK" target="_blank"><p style="color:#000000">1k</p></a></td></tr>
+                        <tr align="center"><td align="left">12</td><td>R6</td><td><a href="https://s.click.aliexpress.com/e/_Al6cVK" target="_blank"><p style="color:#000000">1k</p></a></td></tr>
+                        <tr align="center"><td align="left">13</td><td>R27</td><td><a href="https://s.click.aliexpress.com/e/_Al6cVK" target="_blank"><p style="color:#000000">1k</p></a></td></tr>
+                        <tr align="center"><td align="left">14</td><td>R7</td><td><a href="https://s.click.aliexpress.com/e/_AWVMH2" target="_blank"><p style="color:#000000">100k</p></a></td></tr>
+                        <tr align="center"><td align="left">15</td><td>R10</td><td><a href="https://s.click.aliexpress.com/e/_AWVMH2" target="_blank"><p style="color:#000000">100k</p></a></td></tr>
+                        <tr align="center"><td align="left">16</td><td>R28</td><td><a href="https://s.click.aliexpress.com/e/_AWVMH2" target="_blank"><p style="color:#000000">100k</p></a></td></tr>
+                        <tr align="center"><td align="left">17</td><td>R9</td><td><a href="https://s.click.aliexpress.com/e/_9JDtiY" target="_blank"><p style="color:#000000">200k</p></a></td></tr>
+                        <tr align="center"><td align="left">18</td><td>R11</td><td><a href="https://s.click.aliexpress.com/e/_A9HS6U" target="_blank"><p style="color:#000000">100k</p></a></td></tr>
+                        <tr align="center"><td align="left">19</td><td>R13</td><td><a href="https://s.click.aliexpress.com/e/_9jpjOu" target="_blank"><p style="color:#000000">220k</p></a></td></tr>
+                        <tr align="center"><td align="left">20</td><td>R14</td><td><a href="https://s.click.aliexpress.com/e/_Apg6ne" target="_blank"><p style="color:#000000">51k</p></a></td></tr>
+                        <tr align="center"><td align="left">21</td><td>R53</td><td><a href="https://s.click.aliexpress.com/e/_Apg6ne" target="_blank"><p style="color:#000000">51k</p></a></td></tr>
+                        <tr align="center"><td align="left">22</td><td>R54</td><td><a href="https://s.click.aliexpress.com/e/_Apg6ne" target="_blank"><p style="color:#000000">51k</p></a></td></tr>
+                        <tr align="center"><td align="left">23</td><td>R55</td><td><a href="https://s.click.aliexpress.com/e/_Apg6ne" target="_blank"><p style="color:#000000">51k</p></a></td></tr>
+                        <tr align="center"><td align="left">24</td><td>R15</td><td><a href="https://s.click.aliexpress.com/e/_A1ZjUM" target="_blank"><p style="color:#000000">100</p></a></td></tr>
+                        <tr align="center"><td align="left">25</td><td>R16</td><td><a href="https://s.click.aliexpress.com/e/_A1ZjUM" target="_blank"><p style="color:#000000">100</p></a></td></tr>
+                        <tr align="center"><td align="left">26</td><td>R17</td><td><a href="https://s.click.aliexpress.com/e/_A1ZjUM" target="_blank"><p style="color:#000000">100</p></a></td></tr>
+                        <tr align="center"><td align="left">27</td><td>R18</td><td><a href="https://s.click.aliexpress.com/e/_A1ZjUM" target="_blank"><p style="color:#000000">100</p></a></td></tr>
+                        <tr align="center"><td align="left">28</td><td>R19</td><td><a href="https://s.click.aliexpress.com/e/_A1ZjUM" target="_blank"><p style="color:#000000">100</p></a></td></tr>
+                        <tr align="center"><td align="left">29</td><td>R25</td><td><a href="https://s.click.aliexpress.com/e/_A1ZjUM" target="_blank"><p style="color:#000000">100</p></a></td></tr>
+                        <tr align="center"><td align="left">30</td><td>R32</td><td><a href="https://s.click.aliexpress.com/e/_A1ZjUM" target="_blank"><p style="color:#000000">100</p></a></td></tr>
+                        <tr align="center"><td align="left">31</td><td>R33</td><td><a href="https://s.click.aliexpress.com/e/_A1ZjUM" target="_blank"><p style="color:#000000">100</p></a></td></tr>
+                        <tr align="center"><td align="left">32</td><td>R20</td><td><a href="https://s.click.aliexpress.com/e/_ALIpxi" target="_blank"><p style="color:#000000">15k</p></a></td></tr>
+                        <tr align="center"><td align="left">33</td><td>R29</td><td><a href="https://s.click.aliexpress.com/e/_ALIpxi" target="_blank"><p style="color:#000000">15k</p></a></td></tr>
+                        <tr align="center"><td align="left">34</td><td>R30</td><td><a href="https://s.click.aliexpress.com/e/_ALIpxi" target="_blank"><p style="color:#000000">15k</p></a></td></tr>
+                        <tr align="center"><td align="left">35</td><td>R21</td><td><a href="" target="_blank"><p style="color:#000000">511</p></a></td></tr>
+                        <tr align="center"><td align="left">36</td><td>R22</td><td><a href="https://s.click.aliexpress.com/e/_AL61S0" target="_blank"><p style="color:#000000">1k</p></a></td></tr>
+                        <tr align="center"><td align="left">37</td><td>R23</td><td><a href="https://s.click.aliexpress.com/e/_99T3gy" target="_blank"><p style="color:#000000">68</p></a></td></tr>
+                        <tr align="center"><td align="left">38</td><td>R24</td><td><a href="https://s.click.aliexpress.com/e/_99T3gy" target="_blank"><p style="color:#000000">68</p></a></td></tr>
+                        <tr align="center"><td align="left">39</td><td>R26</td><td><a href="https://s.click.aliexpress.com/e/_9wIDmC" target="_blank"><p style="color:#000000">10k</p></a></td></tr>
+                        <tr align="center"><td align="left">40</td><td>R36</td><td><a href="https://s.click.aliexpress.com/e/_9wIDmC" target="_blank"><p style="color:#000000">10k</p></a></td></tr>
+                        <tr align="center"><td align="left">41</td><td>R45</td><td><a href="https://s.click.aliexpress.com/e/_9wIDmC" target="_blank"><p style="color:#000000">10k</p></a></td></tr>
+                        <tr align="center"><td align="left">42</td><td>R31</td><td><a href="" target="_blank"><p style="color:#000000">90.9k</p></a></td></tr>
+                        <tr align="center"><td align="left">43</td><td>R34</td><td><a href="" target="_blank"><p style="color:#000000">511k</p></a></td></tr>
+                        <tr align="center"><td align="left">44</td><td>R35</td><td><a href="" target="_blank"><p style="color:#000000">511k</p></a></td></tr>
+                        <tr align="center"><td align="left">45</td><td>R37</td><td><a href="" target="_blank"><p style="color:#000000">0.01</p></a></td></tr>
+                        <tr align="center"><td align="left">46</td><td>R42</td><td><a href="https://s.click.aliexpress.com/e/_At39b6" target="_blank"><p style="color:#000000">200</p></a></td></tr>
+                        <tr align="center"><td align="left">47</td><td>R43</td><td><a href="https://s.click.aliexpress.com/e/_At39b6" target="_blank"><p style="color:#000000">200</p></a></td></tr>
+                        <tr align="center"><td align="left">48</td><td>R44</td><td><a href="https://s.click.aliexpress.com/e/_AmTtvq" target="_blank"><p style="color:#000000">22k</p></a></td></tr>
+                        <tr align="center"><td align="left">49</td><td>R46</td><td><a href="https://s.click.aliexpress.com/e/_ALex04" target="_blank"><p style="color:#000000">2.2k</p></a></td></tr>
+                        <tr align="center"><td align="left">50</td><td>R52</td><td><a href="https://s.click.aliexpress.com/e/_9xd0jW" target="_blank"><p style="color:#000000">100k</p></a></td></tr>
+                        <!-- Capacitores -->
+                        <tr align="center"><td align="left">51</td><td>C1</td><td><a href="https://s.click.aliexpress.com/e/_9yl6Na" target="_blank"><p style="color:#000000">1n</p></a></td></tr>
+                        <tr align="center"><td align="left">52</td><td>C2</td><td><a href="https://s.click.aliexpress.com/e/_AXey2k" target="_blank"><p style="color:#000000">1000uF</p></a></td></tr>
+                        <tr align="center"><td align="left">53</td><td>C3</td><td><a href="https://s.click.aliexpress.com/e/_AaNet6" target="_blank"><p style="color:#000000">100uF</p></a></td></tr>
+                        <tr align="center"><td align="left">54</td><td>C5</td><td><a href="https://s.click.aliexpress.com/e/_AaNet6" target="_blank"><p style="color:#000000">100uF</p></a></td></tr>
+                        <tr align="center"><td align="left">55</td><td>C20</td><td><a href="https://s.click.aliexpress.com/e/_AaNet6" target="_blank"><p style="color:#000000">100uF</p></a></td></tr>
+                        <tr align="center"><td align="left">56</td><td>C4</td><td><a href="https://s.click.aliexpress.com/e/_9gcyvw" target="_blank"><p style="color:#000000">10n</p></a></td></tr>
+                        <tr align="center"><td align="left">57</td><td>C8</td><td><a href="https://s.click.aliexpress.com/e/_9gcyvw" target="_blank"><p style="color:#000000">10n</p></a></td></tr>
+                        <tr align="center"><td align="left">58</td><td>C11</td><td><a href="https://s.click.aliexpress.com/e/_9gcyvw" target="_blank"><p style="color:#000000">10n</p></a></td></tr>       
+                        <tr align="center"><td align="left">59</td><td>C6</td><td><a href="https://s.click.aliexpress.com/e/_Ac7DkG" target="_blank"><p style="color:#000000">10uF</p></a></td></tr>
+                        <tr align="center"><td align="left">60</td><td>C10</td><td><a href="https://s.click.aliexpress.com/e/_Ac7DkG" target="_blank"><p style="color:#000000">10uF</p></a></td></tr>
+                        <tr align="center"><td align="left">61</td><td>C7</td><td><a href="https://s.click.aliexpress.com/e/_AlGGuu" target="_blank"><p style="color:#000000">1500uF</p></a></td></tr>
+                        <tr align="center"><td align="left">62</td><td>C9</td><td><a href= "https://s.click.aliexpress.com/e/_A7JOgu" target="_blank"><p style="color:#000000">100n</p></a></td></tr>
+                        <tr align="center"><td align="left">63</td><td>C12</td><td><a href="https://s.click.aliexpress.com/e/_A7JOgu" target="_blank"><p style="color:#000000">100n</p></a></td></tr>
+                        <tr align="center"><td align="left">64</td><td>C16</td><td><a href="https://s.click.aliexpress.com/e/_A7JOgu" target="_blank"><p style="color:#000000">100n</p></a></td></tr>
+                        <tr align="center"><td align="left">65</td><td>C19</td><td><a href="https://s.click.aliexpress.com/e/_A7JOgu" target="_blank"><p style="color:#000000">100n</p></a></td></tr>
+                        <tr align="center"><td align="left">66</td><td>C21</td><td><a href="https://s.click.aliexpress.com/e/_A7JOgu" target="_blank"><p style="color:#000000">100n</p></a></td></tr>
+                        <tr align="center"><td align="left">67</td><td>C24</td><td><a href="https://s.click.aliexpress.com/e/_A7JOgu" target="_blank"><p style="color:#000000">100n</p></a></td></tr>
+                        <tr align="center"><td align="left">68</td><td>C34</td><td><a href="https://s.click.aliexpress.com/e/_A7JOgu" target="_blank"><p style="color:#000000">100n</p></a></td></tr>
+                        <tr align="center"><td align="left">69</td><td>C13</td><td><a href="https://s.click.aliexpress.com/e/_AoXoRQ" target="_blank"><p style="color:#000000">10n</p></a></td></tr>
+                        <tr align="center"><td align="left">70</td><td>C14</td><td><a href="https://s.click.aliexpress.com/e/_ACqBlq" target="_blank"><p style="color:#000000">560nF</p></a></td></tr>
+                        <tr align="center"><td align="left">71</td><td>C15</td><td><a href="https://s.click.aliexpress.com/e/_AD0HDO" target="_blank"><p style="color:#000000">2.2uF</p></a></td></tr>
+                        <tr align="center"><td align="left">72</td><td>C17</td><td><a href="https://s.click.aliexpress.com/e/_A2w9tW" target="_blank"><p style="color:#000000">4.7uF</p></a></td></tr>
+                        <tr align="center"><td align="left">73</td><td>C18</td><td><a href="https://s.click.aliexpress.com/e/_A2w9tW" target="_blank"><p style="color:#000000">4.7uF</p></a></td></tr>
+                        <tr align="center"><td align="left">74</td><td>C22</td><td><a href="https://s.click.aliexpress.com/e/_AlUdbw" target="_blank"><p style="color:#000000">100n</p></a></td></tr>
+                        <tr align="center"><td align="left">75</td><td>C23</td><td><a href="https://s.click.aliexpress.com/e/_AlUdbw" target="_blank"><p style="color:#000000">100n</p></a></td></tr>
+                        <tr align="center"><td align="left">76</td><td>C33</td><td><a href= "https://s.click.aliexpress.com/e/_9jbLZq" target="_blank"><p style="color:#000000">470uF</p></a></td></tr>
+                        <tr align="center"><td align="left">77</td><td>C150</td><td><a href="https://s.click.aliexpress.com/e/_9gcyvw" target="_blank"><p style="color:#000000">220n</p></a></td></tr>
+                        <tr align="center"><td align="left">78</td><td>C170</td><td><a href="" target="_blank"><p style="color:#000000">220n</p></a></td></tr>
+                        <!-- Diodos -->
+                        <tr align="center"><td align="left">79</td><td>D1</td><td><a href="https://s.click.aliexpress.com/e/_AgDRYC" target="_blank"><p style="color:#000000">ZMM2V 5V1</p></a></td></tr>
+                        <tr align="center"><td align="left">80</td><td>D2</td><td><a href="https://s.click.aliexpress.com/e/_AgDRYC" target="_blank"><p style="color:#000000">ZMM2V 5V1</p></a></td></tr>
+                        <tr align="center"><td align="left">81</td><td>D3</td><td><a href="https://s.click.aliexpress.com/e/_AgDRYC" target="_blank"><p style="color:#000000">ZMM2V 5V1</p></a></td></tr>
+                        <tr align="center"><td align="left">82</td><td>D4</td><td><a href="https://s.click.aliexpress.com/e/_AgDRYC" target="_blank"><p style="color:#000000">ZMM2V 5V1</p></a></td></tr>
+                        <tr align="center"><td align="left">83</td><td>D5</td><td><a href= "https://s.click.aliexpress.com/e/_AVOA6Y" target="_blank"><p style="color:#000000">1N4749 24V</p></a></td></tr>
+                        <tr align="center"><td align="left">84</td><td>D6</td><td><a href="https://s.click.aliexpress.com/e/_AnScag" target="_blank"><p style="color:#000000">AH</p></a></td></tr>
+                        <tr align="center"><td align="left">85</td><td>D7</td><td><a href="https://s.click.aliexpress.com/e/_AEqWpW" target="_blank"><p style="color:#000000">1N4739A 9V1</p></a></td></tr>
+                        <tr align="center"><td align="left">86</td><td>D10</td><td><a href="https://s.click.aliexpress.com/e/_Aempza" target="_blank"><p style="color:#000000">1N4005</p></a></td></tr>
+                        <tr align="center"><td align="left">87</td><td>D12</td><td><a href="https://s.click.aliexpress.com/e/_9f5NWy" target="_blank"><p style="color:#000000">A4W14</p></a></td></tr>
+                        <tr align="center"><td align="left">88</td><td>D14</td><td><a href="https://s.click.aliexpress.com/e/_A90GUc" target="_blank"><p style="color:#000000">HFA25PB60</p></a></td></tr>
+                        <!-- Transistores -->
+                        <tr align="center"><td align="left">89</td><td>Q1</td><td><a href="https://s.click.aliexpress.com/e/_ANbL3A" target="_blank"><p style="color:#000000">S4025L</p></a></td></tr>
+                        <tr align="center"><td align="left">90</td><td>Q2</td><td><a href="https://s.click.aliexpress.com/e/_AV3yBa" target="_blank"><p style="color:#000000">2X</p></a></td></tr>
+                        <tr align="center"><td align="left">91</td><td>Q4</td><td><a href="https://s.click.aliexpress.com/e/_9vIDpw" target="_blank"><p style="color:#000000">IRFP250M</p></a></td></tr>
+                        <tr align="center"><td align="left">92</td><td>Q5</td><td><a href="https://s.click.aliexpress.com/e/_ADqV40" target="_blank"><p style="color:#000000">BTA06-600B</p></a></td></tr>
+                        <tr align="center"><td align="left">93</td><td>Q6</td><td><a href="https://s.click.aliexpress.com/e/_ADqV40" target="_blank"><p style="color:#000000">BTA06-600B</p></a></td></tr>
+                       <!-- CI -->
+                        <tr align="center"><td align="left">94</td><td>U1</td><td><a href="https://s.click.aliexpress.com/e/_9gU256" target="_blank"><p style="color:#000000">PC817</p></a></td></tr>
+                        <tr align="center"><td align="left">95</td><td>U2</td><td><a href="https://s.click.aliexpress.com/e/_9gU256" target="_blank"><p style="color:#000000">PC817</p></a></td></tr>
+                        <tr align="center"><td align="left">96</td><td>U3</td><td><a href="https://tecgym.epayco.me/vende/Productos%20electronicos/product-info/1625636961854/1625697792219" target="_blank"><p style="color:#000000">PIC16F1619</p></a></td></tr>
+                        <tr align="center"><td align="left">97</td><td>U4</td><td><a href="https://s.click.aliexpress.com/e/_AXjQrI" target="_blank"><p style="color:#000000">MOC3052</p></a></td></tr>
+                        <tr align="center"><td align="left">98</td><td>U5</td><td><a href="https://s.click.aliexpress.com/e/_AW3VeY" target="_blank"><p style="color:#000000">TC4427A</p></a></td></tr>
+                        <tr align="center"><td align="left">99</td><td>U6</td><td><a href="https://s.click.aliexpress.com/e/_A2Zeh6" target="_blank"><p style="color:#000000">MOC3053</p></a></td></tr>
+                        <tr align="center"><td align="left">100</td><td>U7</td><td><a href="https://s.click.aliexpress.com/e/_A2Zeh6" target="_blank"><p style="color:#000000">MOC3053</p></a></td></tr>
+                        <tr align="center"><td align="left">101</td><td>U8</td><td><a href="https://s.click.aliexpress.com/e/_Akecco" target="_blank"><p style="color:#000000">DF10M</p></a></td></tr>
+                         <!-- Miscellaneous -->
+                        <tr align="center"><td align="left">102</td><td>J1</td><td><a href="https://s.click.aliexpress.com/e/_AFGqYY" target="_blank"><p style="color:#000000">000</p></a></td></tr>
+                        <tr align="center"><td align="left">103</td><td>LD1</td><td><a href="https://s.click.aliexpress.com/e/_9uz5gg" target="_blank"><p style="color:#000000">RED 3MM</p></a></td></tr>
+                        <tr align="center"><td align="left">104</td><td>MOV1</td><td><a href="https://s.click.aliexpress.com/e/_ADjqug" target="_blank"><p style="color:#000000">14N241K</p></a></td></tr>
+                        <tr align="center"><td align="left">105</td><td>RG2</td><td><a href="https://s.click.aliexpress.com/e/_9hZUW4" target="_blank"><p style="color:#000000">78L05</p></a></td></tr>
+                        <tr align="center"><td align="left">106</td><td>RG3</td><td><a href="https://s.click.aliexpress.com/e/_9hZUW4" target="_blank"><p style="color:#000000">78L05</p></a></td></tr>
+                        <tr align="center"><td align="left">107</td><td>RG5</td><td><a href="https://s.click.aliexpress.com/e/_AV0A16" target="_blank"><p style="color:#000000">78L15</p></a></td></tr>
+
+                        
+                        
+                        
+                   
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
