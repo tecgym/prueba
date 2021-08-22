@@ -1,4 +1,4 @@
-### **Bienvenido al repositorio oficial de Frikili!**
+### **Bienvenido al repositorio oficial de Frikili!**:smile::laughing: :laughing:
 **Instalación.**
 
 
